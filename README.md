@@ -18,11 +18,6 @@ Docker Base Image for Wine
 
 Project created for [DoChat](https://github.com/huan/docker-wechat) & [DoWork](https://github.com/huan/docker-wxwork)
 
-## Thanks
-
-1. [基于深度操作系统的微信 docker 镜像](https://github.com/bestwu/docker-wechat) by [@bestwu](https://github.com/bestwu)
-1. DoChat logo designed by my friend Ruoxin SONG.
-
 ## Author
 
 [Huan LI](https://github.com/huan) ([李卓桓](http://linkedin.com/in/zixia)) zixia@zixia.net

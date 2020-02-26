@@ -7,8 +7,10 @@ Docker Base Image for Wine
 ## Features
 
 1. `WINEARCH=i386`
-1. User: `user`
-1. Group: `group`
+1. `gecko`
+1. `winetricks win7`
+1. `winetricks riched20`
+1. User:Group `user:group`
 
 ## History
 

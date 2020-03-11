@@ -2,7 +2,7 @@
 
 Docker Base Image for Wine
 
-[![dockeri.co](https://dockeri.co/image/zixia/wxwork)](https://hub.docker.com/r/zixia/wxwork/)
+[![dockeri.co](https://dockeri.co/image/zixia/wine)](https://hub.docker.com/r/zixia/wine/)
 
 ## Features
 

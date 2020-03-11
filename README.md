@@ -22,7 +22,7 @@ Docker Base Image for Wine
 
 ### v0.1 (Feb 17, 2020)
 
-1. Project created for [DoChat](https://github.com/huan/docker-wechat) & [DoWork](https://github.com/huan/docker-wxwork)
+1. Project created for [DoChat](https://github.com/huan/docker-wechat) & [DoWork](https://github.com/huan/docker-wxwork) & [Docker Windows](https://github.com/huan/docker-windows)
 1. Wine v4.0.2 with Ubuntu 19.10 (eoan)
 
 ## Author

@@ -25,7 +25,7 @@ Docker Base Image for Wine
 
 1. Wine v5.0 with Ubuntu 19.10 (eoan)
 1. Add `winescript`
-1. Enable GitHub Actions with Docker Hub Deploying.
+1. Enable GitHub Actions with Docker Hub Deploying
 
 ### v0.1 (Feb 17, 2020)
 

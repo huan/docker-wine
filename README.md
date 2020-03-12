@@ -15,6 +15,18 @@ Docker Base Image for Wine
 1. User:Group `user:group`
 1. [winescript](https://www.linux.org/threads/running-windows-batch-files-on-linux.11205/) to run `.bat` like a `.sh`
 
+## Usage
+
+### Versioning
+
+The docker image has two schema of the versioning:
+
+1. `X.Y` (X >=1 ): This is for the wine version.
+    1. `zixia/wine:4.0`: wine-4.0
+    1. `zixia/wine:5.0`: wine-5.0
+1. `x.y` (x = 0): This is for the docker image version.
+    1. `zixia/wine:0.2`: docker-wine version 0.2
+
 ## Links
 
 ## History

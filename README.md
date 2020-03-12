@@ -12,6 +12,10 @@ Docker Base Image for Wine
 1. `winetricks riched20`
 1. User:Group `user:group`
 
+## Links
+
+- [Running Windows Batch Files on Linux](https://www.linux.org/threads/running-windows-batch-files-on-linux.11205/)
+
 ## History
 
 ### master

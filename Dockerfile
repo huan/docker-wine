@@ -79,6 +79,7 @@ RUN mkdir -p /usr/share/wine/{gecko,mono} \
 
 COPY [A-Z]* /
 COPY VERSION /VERSION.docker-wine
+COPY src/winescript /usr/local/bin/
 
 LABEL \
     org.opencontainers.image.authors="Huan (李卓桓) <zixia@zixia.net>" \

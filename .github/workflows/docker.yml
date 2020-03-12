@@ -1,0 +1,34 @@
+name: Docker
+
+on: [push, pull_request]
+
+jobs:
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: zbeekman/ShellCheck-Linter-Action@v1.0.1
+      - name: Install Dependencies
+        run: ./scripts/install.sh
+      # - name: Build
+      #   run: ./scripts/build.sh
+      - name: Test
+        run: ./scripts/test.sh
+
+  # https://www.prestonlamb.com/blog/creating-a-docker-image-with-github-actions
+  publish:
+    name: Publish
+    needs: [build]
+    if: github.event_name == 'push' && (github.ref == 'refs/heads/master' || startsWith(github.ref, 'refs/heads/v[0-9]+'))
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Install Dependencies
+        run: ./scripts/install.sh
+      - name: Login to DockerHub Registry
+        run: echo ${{ secrets.DOCKER_PERSONAL_ACCESS_TOKEN }} | docker login -u zixia --password-stdin
+      - name: Build the Docker image
+        run: docker build -t artifact_image .
+      - name: Deploy to Docker Hub
+        run: bash -x ./scripts/deploy.sh artifact_image

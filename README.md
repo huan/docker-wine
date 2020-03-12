@@ -11,10 +11,9 @@ Docker Base Image for Wine
 1. `winetricks win7`
 1. `winetricks riched20`
 1. User:Group `user:group`
+1. [winescript](https://www.linux.org/threads/running-windows-batch-files-on-linux.11205/) to run `.bat` like a `.sh`
 
 ## Links
-
-- [Running Windows Batch Files on Linux](https://www.linux.org/threads/running-windows-batch-files-on-linux.11205/)
 
 ## History
 
@@ -22,11 +21,16 @@ Docker Base Image for Wine
 
 ### v0.2 (Mar 12, 2020)
 
-1. Wine v5.0
+1. Wine v5.0 with Ubuntu 19.10 (eoan)
+1. Add `winescript`
+1. Enable GitHub Actions with Docker Hub Deploying.
 
 ### v0.1 (Feb 17, 2020)
 
-1. Project created for [DoChat](https://github.com/huan/docker-wechat) & [DoWork](https://github.com/huan/docker-wxwork) & [Docker Windows](https://github.com/huan/docker-windows)
+1. Project created for:
+    1. [DoChat](https://github.com/huan/docker-wechat)
+    1. [DoWork](https://github.com/huan/docker-wxwork)
+    1. [Docker Windows](https://github.com/huan/docker-windows)
 1. Wine v4.0.2 with Ubuntu 19.10 (eoan)
 
 ## Author

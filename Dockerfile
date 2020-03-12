@@ -55,8 +55,8 @@ ARG MONO_VER=4.9.4
 RUN mkdir -p /usr/share/wine/{gecko,mono} \
   && curl -sL -o /usr/share/wine/gecko/wine-gecko-${GECKO_VER}-x86.msi \
     "https://dl.winehq.org/wine/wine-gecko/${GECKO_VER}/wine-gecko-${GECKO_VER}-x86.msi" \
-  && curl -sL -o /usr/share/wine/mono/wine-mono-${MONO_VER}.msi \
-    "https://dl.winehq.org/wine/wine-mono/${MONO_VER}/wine-mono-${MONO_VER}.msi" \
+  # && curl -sL -o /usr/share/wine/mono/wine-mono-${MONO_VER}.msi \
+  #   "https://dl.winehq.org/wine/wine-mono/${MONO_VER}/wine-mono-${MONO_VER}.msi" \
   && chown -R user:group /usr/share/wine/{gecko,mono} \
   && echo 'Gecko & Mono Downloaded' \
   \

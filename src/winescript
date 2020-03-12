@@ -19,11 +19,11 @@ set -eo pipefail
 
 # https://www.linux.org/threads/running-windows-batch-files-on-linux.11205/
 
-FILE="/tmp/script_${$}_$(date '+%s%N').bat"
-trap "{ rm -f $FILE; }" EXIT
+FILE="/tmp/winescript_${$}_$(date '+%s%N').bat"
+trap '{ rm -f "${FILE}"; }' EXIT
 
-tail -n +2 $1 > $FILE
-wine cmd.exe /c $FILE
-echo ""
+tail -n +2 "$1" > "$FILE"
+wine CMD.EXE /C "$FILE"
+echo
 
 exit

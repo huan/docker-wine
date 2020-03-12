@@ -1,8 +1,10 @@
 # docker-wine
 
-Docker Base Image for Wine
+![Docker](https://github.com/huan/docker-wine/workflows/Docker/badge.svg)
 
 [![dockeri.co](https://dockeri.co/image/zixia/wine)](https://hub.docker.com/r/zixia/wine/)
+
+Docker Base Image for Wine
 
 ## Features
 

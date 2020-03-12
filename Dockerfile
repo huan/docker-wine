@@ -78,6 +78,7 @@ RUN mkdir -p /usr/share/wine/{gecko,mono} \
   && echo 'Wine Initialized'
 
 COPY [A-Z]* /
+COPY VERSION /VERSION.docker-wine
 
 LABEL \
     org.opencontainers.image.authors="Huan (李卓桓) <zixia@zixia.net>" \

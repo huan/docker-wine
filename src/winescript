@@ -1,0 +1,20 @@
+#!/bin/sh
+# -*- coding: utf-8 -*-
+# vim:fileencoding=utf-8
+# Created by Devyn Collier Johnson
+# <DevynCJohnson@Gmail.com>
+# http://dcjtech.info/
+
+# Version 2015.02.08
+# Public Domain (CC0)
+# https://creativecommons.org/publicdomain/zero/1.0/
+# http://creativecommons.org/about/cc0
+
+# https://www.linux.org/threads/running-windows-batch-files-on-linux.11205/
+
+FILE=/tmp/script_$(date "+%s%N").bat
+tail -n +2 $1 > $FILE
+wine cmd.exe /c $FILE
+rm $FILE
+echo ""
+exit

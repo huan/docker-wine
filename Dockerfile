@@ -68,8 +68,11 @@ RUN mkdir -p /usr/share/wine/{gecko,mono} \
   && su user -c 'WINEARCH=win32 wine wineboot' \
   \
   # wintricks
-  && su user -c 'winetricks -q win7' \
+  && su user -c 'winetricks -q msls31' \
+  && su user -c 'winetricks -q ole32' \
   && su user -c 'winetricks -q riched20' \
+  && su user -c 'winetricks -q riched30' \
+  && su user -c 'winetricks -q win7' \
   \
   # Clean
   && rm -fr /usr/share/wine/{gecko,mono} \

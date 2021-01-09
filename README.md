@@ -33,6 +33,10 @@ The docker image has two schema of the versioning:
 
 ### master
 
+### v0.3 (Jan 9, 2020)
+
+1. Prepare to use Debian instead of Ubuntu 19.10 (eoan)
+
 ### v0.2 (Mar 12, 2020)
 
 1. Wine v5.0 with Ubuntu 19.10 (eoan)

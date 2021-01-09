@@ -24,7 +24,6 @@ RUN apt-get update \
     curl \
     gnupg2 \
     gosu \
-    language-pack-zh-hans \
     software-properties-common \
     tzdata \
     unzip \

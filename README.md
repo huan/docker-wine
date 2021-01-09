@@ -35,7 +35,7 @@ The docker image has two schema of the versioning:
 
 ### v0.3 (Jan 9, 2020)
 
-1. Prepare to use Debian instead of Ubuntu 19.10 (eoan)
+1. Use Debian 10 (Buster) to replace Ubuntu 19.10 (Eoan) (Issue [#3](https://github.com/huan/docker-wine/issues/3))
 
 ### v0.2 (Mar 12, 2020)
 

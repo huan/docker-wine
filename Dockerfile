@@ -31,6 +31,7 @@ RUN apt-get update \
   && apt-get clean \
   && rm -fr /tmp/*
 
+# https://wiki.winehq.org/Debian
 RUN dpkg --add-architecture i386 \
   && curl -sL https://dl.winehq.org/wine-builds/winehq.key | apt-key add - \
   && apt-add-repository 'deb https://dl.winehq.org/wine-builds/debian/ buster main' \

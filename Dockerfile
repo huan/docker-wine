@@ -56,8 +56,8 @@ RUN groupadd group \
   && chsh -s /bin/bash user \
   && echo 'User Created'
 
-ARG GECKO_VER=2.47.1
-ARG MONO_VER=4.9.4
+ARG GECKO_VER=2.47.2
+ARG MONO_VER=6.3.0
 
 RUN mkdir -p /usr/share/wine/{gecko,mono} \
   && curl -sL -o /usr/share/wine/gecko/wine-gecko-${GECKO_VER}-x86.msi \

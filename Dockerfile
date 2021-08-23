@@ -36,6 +36,12 @@ RUN dpkg --add-architecture i386 \
   && curl -sL https://dl.winehq.org/wine-builds/winehq.key | apt-key add - \
   && apt-add-repository 'deb https://dl.winehq.org/wine-builds/debian/ buster main' \
   && echo 'i386 Architecture & Wine Repo Added' \
+  \
+  # https://www.linuxuprising.com/2019/09/how-to-install-wine-staging-development.html
+  && curl -sL https://download.opensuse.org/repositories/Emulators:/Wine:/Debian/Debian_10/Release.key | apt-key add - \
+  && echo 'deb http://download.opensuse.org/repositories/Emulators:/Wine:/Debian/Debian_10 ./' | tee /etc/apt/sources.list.d/wine-obs.list \
+  && echo 'libfaudio0 Repo Added' \
+  \
   && apt-get update \
   && apt-get install -y \
     winehq-stable \

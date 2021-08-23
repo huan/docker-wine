@@ -31,7 +31,7 @@ The docker image has two schema of the versioning:
 
 ## History
 
-### master
+### master v0.4 (Aug 24, 2021)
 
 ### v0.3 (Jan 9, 2020)
 

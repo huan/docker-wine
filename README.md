@@ -34,6 +34,7 @@ The docker image has two schema of the versioning:
 ### master v0.4 (Aug 24, 2021)
 
 1. Upgrade to Wine version 6
+1. Rename default branch from `master` to `main`
 
 ### v0.3 (Jan 9, 2020)
 

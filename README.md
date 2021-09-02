@@ -31,7 +31,11 @@ The docker image has two schema of the versioning:
 
 ## History
 
-### master v0.4 (Aug 24, 2021)
+### master v0.5
+
+1. Upgrade to Debian 11 (bullseye)
+
+### v0.4 (Aug 24, 2021)
 
 1. Upgrade to Wine version 6
 1. Rename default branch from `master` to `main`

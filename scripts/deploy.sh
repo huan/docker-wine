@@ -11,9 +11,13 @@ function deployWineVersion () {
     -a stdout \
     --entrypoint wine \
     "$ARTIFACT_IMAGE" \
-    --version | cut -d- -f2   # wine-5.0 -> 5.0
+    --version | cut -d- -f2 | awk -F. '{print $1"."$2}'
   )
-
+  #
+  # versions:
+  #   - Huan(2021): wine-5.0 -> 5.0
+  #   - Huan(202109): wine-6.0.1 -> 6.0
+  #
   echo "Deploying WINE_VERSION=$WINE_VERSION"
   docker tag "${ARTIFACT_IMAGE}" "${IMAGE}:${WINE_VERSION}"
   docker push "${IMAGE}:${WINE_VERSION}"

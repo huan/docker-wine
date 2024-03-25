@@ -4,7 +4,7 @@ on: [push, pull_request]
 
 env:
   IMAGE_NAME: wine
-  DOCKER_USERNAME: linrol
+  DOCKER_USERNAME: zixia
 
 jobs:
   build:

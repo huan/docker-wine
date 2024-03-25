@@ -1,10 +1,10 @@
-name: Docker
+name: Docker-ARM
 
 on: [push, pull_request]
 
 env:
   IMAGE_NAME: wine
-  DOCKER_USERNAME: zixia
+  DOCKER_USERNAME: linrol
 
 jobs:
   build:

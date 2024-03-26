@@ -7,7 +7,7 @@ env:
   DOCKER_USERNAME: zixia
 
 jobs:
-  build:
+  build and push:
     runs-on: ubuntu-latest
     permissions:
       contents: read

@@ -19,5 +19,5 @@ elif [ "$TARGETPLATFORM" = "linux/arm64" ]; then
    # Add repo box64 to source list and install box64
    wget https://cdn05042023.gitlink.org.cn/shenmo7192/box64-debs/raw/branch/master/box64-CN.list -O /etc/apt/sources.list.d/box64.list
    wget -qO- https://cdn05042023.gitlink.org.cn/shenmo7192/box64-debs/raw/branch/master/KEY.gpg | gpg --dearmor -o /etc/apt/trusted.gpg.d/box64-debs-archive-keyring.gpg
-   apt update && apt install box64-arm64 -y
+   apt update && apt install box64 -y
 fi

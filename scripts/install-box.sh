@@ -3,7 +3,10 @@ set -euxo pipefail
 # NOTE: Can only run on aarch64 (since box64 can only run on aarch64)
 # box64 runs wine-amd64, box86 runs wine-i386.
 
-if [ "$TARGETPLATFORM" == "linux/arm64" ]; then
+if [ -z "$TARGETPLATFORM" ]; then
+  echo "TARGETPLATFORM is not set. Run docker build with --build-arg TARGETPLATFORM=linux/arm64"
+  exit 1
+elif [ "$TARGETPLATFORM" = "linux/arm64" ]; then
    # Enable multi-arch
    dpkg --add-architecture armhf && apt-get update
 

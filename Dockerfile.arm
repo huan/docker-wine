@@ -26,10 +26,6 @@ RUN bash /install-box.sh && rm /install-box.sh
 COPY scripts/install-wine.sh /
 RUN bash /install-wine.sh && rm /install-wine.sh
 
-# Install box wrapper for wine
-COPY scripts/wrap-wine.sh /
-RUN bash /wrap-wine.sh && rm /wrap-wine.sh
-
 # Clean up
 RUN apt-get -y autoremove \
  && apt-get clean autoclean \
@@ -47,18 +43,18 @@ RUN groupadd group \
 RUN mv ~/wine /home/user/ \
   && chown -R user:group /home/user/
 
-# wintricks
-RUN su user -c 'wine wineboot'
-RUN su user -c 'winetricks -q msls31'
-RUN su user -c 'winetricks -q ole32'
-RUN su user -c 'winetricks -q riched20'
-RUN su user -c 'winetricks -q riched30'
-RUN su user -c 'winetricks -q win7'
+# Install box wrapper for wine
+COPY scripts/wrap-wine.sh /
+RUN bash /wrap-wine.sh && rm /wrap-wine.sh
+
+# Run wineboot to initialise wine
+RUN su user -c 'wine64 wineboot'
 
 # Clean
 RUN rm -fr /home/user/{.cache,tmp}/* \
   && rm -fr /tmp/* \
   && echo 'Wine Initialized'
 
+USER user
 ENTRYPOINT ["bash", "-c"]
 CMD ["bash"]

@@ -13,16 +13,21 @@ fi
 # Install wrapper script for box86 & box64
 cat << EOF > /usr/local/bin/wine
 #!/bin/sh
-WINEPREFIX=~/.wine WINEARCH=win32 $box86 ~/wine/bin/wine \$@
+WINEPREFIX=/home/user/.wine WINEARCH=win32 $box86 /home/user/wine/bin/wine \$@
 EOF
 cat << EOF > /usr/local/bin/wine64
 #!/bin/sh
-WINEPREFIX=~/.wine64 WINEARCH=win64 $box64 ~/wine/bin/wine64 \$@
+WINEPREFIX=/home/user/.wine64 WINEARCH=win64 $box64 /home/user/wine/bin/wine64 \$@
 EOF
 cat << EOF > /usr/local/bin/wineserver
 #!/bin/sh
-WINEPREFIX=~/.wine64 WINEARCH=win64 $box64 ~/wine/bin/wineserver \$@
+WINEPREFIX=/home/user/.wine64 WINEARCH=win64 $box64 /home/user/wine/bin/wineserver \$@
 EOF
-ln -s ~/wine/bin/wineboot /usr/local/bin/wineboot
-ln -s ~/wine/bin/winecfg /usr/local/bin/winecfg
-chmod +x /usr/local/bin/wine /usr/local/bin/wine64 /usr/local/bin/wineboot /usr/local/bin/winecfg /usr/local/bin/wineserver
+cat << EOF > /usr/local/bin/winetricks64
+WINE=wine64 WINEPREFIX=/home/user/.wine64
+wine64 $box64 /home/user/wine/bin/winetricks \$@
+EOF
+
+ln -s /home/user/wine/bin/wineboot /usr/local/bin/wineboot
+ln -s /home/user/wine/bin/winecfg /usr/local/bin/winecfg
+chmod +x /usr/local/bin/wine /usr/local/bin/wine64 /usr/local/bin/wineboot /usr/local/bin/winecfg /usr/local/bin/wineserver /usr/local/bin/winetricks64

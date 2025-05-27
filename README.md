@@ -33,6 +33,10 @@ The docker image has two schema of the versioning:
 
 ## History
 
+### master v0.6
+
+1. Added support for armhf and arm64 architectures
+
 ### master v0.5
 
 1. Upgrade to Debian 11 (bullseye)
@@ -59,6 +63,10 @@ The docker image has two schema of the versioning:
     1. [DoWork](https://github.com/huan/docker-wxwork)
     1. [Docker Windows](https://github.com/huan/docker-windows)
 1. Wine v4.0.2 with Ubuntu 19.10 (eoan)
+
+## Thanks
+
+- [Support linux armhf/arm64 #10](https://github.com/huan/docker-wine/pull/10) from [@linrol](https://github.com/linrol) and [@tobiasdiez](https://github.com/tobiasdiez)
 
 ## Author
 

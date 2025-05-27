@@ -66,7 +66,7 @@ The docker image has two schema of the versioning:
 
 ## Thanks
 
-- [Support linux armhf/arm64 #10](https://github.com/huan/docker-wine/pull/10) from [@linrol](https://github.com/linrol)[@tobiasdiez](https://github.com/tobiasdiez)
+- [Support linux armhf/arm64 #10](https://github.com/huan/docker-wine/pull/10) from [@linrol](https://github.com/linrol) and [@tobiasdiez](https://github.com/tobiasdiez)
 
 ## Author
 

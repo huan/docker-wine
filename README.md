@@ -35,7 +35,7 @@ The docker image has two schema of the versioning:
 
 ### master v0.6
 
-1. Added support for the armhf architecture
+1. Added support for armhf and arm64 architectures
 
 ### master v0.5
 

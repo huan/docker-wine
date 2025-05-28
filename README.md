@@ -25,9 +25,10 @@ The docker image has two schema of the versioning:
 1. `X.Y` (X >=1 ): This is for the wine version.
     1. `zixia/wine:4.0`: wine-4.0
     1. `zixia/wine:5.0`: wine-5.0
-1. `x.y` (x = 0): This is for the docker image version.
+2. `x.y` (x = 0): This is for the docker image version.
     1. `zixia/wine:0.2`: docker-wine version 0.2
-1. `arm64` (arm64): This is for the docker image of arm64 architecture.
+3. `arm64` (arm64): This is for the docker image of arm64 architecture.
+4. `latest`: This is a multi-architecture Docker image supporting both arm64 and amd64 platforms.
 
 ## Links
 
